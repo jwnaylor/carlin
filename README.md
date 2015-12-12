@@ -43,14 +43,20 @@ There is a sample .json file in `problem_2` which gives the format your server s
 Feel free to use any language or framework to complete this task. In the Pull Request, provide some sample usage instructions (e.g. the endpoint to post), as well as how to run your server
 
 
-#### Jerome Naylor
+#### Jerome Naylor (Problem2)
 #### Instructions
 
 
 ##### Setup
 
-
-
+* clone repository: https://github.com/jwnaylor/carlin.git
+* cd into carlin/problem_2
+* Setup a virtualenv carlin/venv using pip and the requirements.txt file (ensure using python2.7
+* cd into carlin
+* virtualenv venv
+* source venv/bin/activate
+* pip install -r problem_2/requirements
+  
 
 ##### Behavior
 
@@ -59,6 +65,8 @@ does not contain a value with of the same type as the sample json, it will be ig
 in the list have the values of the same type as the sample json. Sample json should not contain heterogeneous values in lists.
  
 ##### Run Tests
+
+Run units tests
 
 $ nosetests --all-modules -v
 
@@ -83,7 +91,7 @@ $ curl http://127.0.0.1:5000/send -X POST --data "@test2.json" -H 'Content-Type:
 
 ##### Using AJAX
 
-In browser, the url http://127.0.0.1:5000/try will redner web page that allows you to enter a json string into a text area and
+In browser, the url http://127.0.0.1:5000/try will render web page that allows you to enter a json string into a text area and
 by clicking one to two buttons either retrieve the processed json and update the page, or retrieve a partial html response and 
 update the page.
 
