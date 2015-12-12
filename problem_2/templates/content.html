@@ -1,0 +1,17 @@
+<div id="content">
+    <h1>Here is the JSON document after cleaning</h1>
+    <div class="cleaned">{% if cleaned_json %}
+        {{ cleaned_json|replace("\n", "\n<br>")|replace(" ", '&nbsp;')|safe }}
+    {% endif %}
+    </div>
+    <h1>Here is what happend during cleaning</h1>
+    <div class="report">
+    {% if cleaning_report %}
+        {% for report_line in cleaning_report %}
+            <div class="report-line">{{ report_line }}</div>
+        {% endfor %}
+    {% endif %}
+    </div>
+</div>
+
+

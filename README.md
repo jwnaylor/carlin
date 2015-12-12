@@ -43,3 +43,49 @@ There is a sample .json file in `problem_2` which gives the format your server s
 Feel free to use any language or framework to complete this task. In the Pull Request, provide some sample usage instructions (e.g. the endpoint to post), as well as how to run your server
 
 
+#### Jerome Naylor
+#### Instructions
+
+
+##### Setup
+
+
+
+
+##### Behavior
+
+JSON input is processed and compared with the given sample.json.  If the input json contains extra fields they are ignored.  If a feild
+does not contain a value with of the same type as the sample json, it will be ignored.  Lists are processed to make sure all elements 
+in the list have the values of the same type as the sample json. Sample json should not contain heterogeneous values in lists.
+ 
+##### Run Tests
+
+$ nosetests --all-modules -v
+
+$ nosetests server_test:ServerTests -v
+
+
+##### Start Server
+
+$ cd carlin/problem_2
+$ python server.py
+
+##### Using cURL
+
+To post json from file test2.json and recieve a json response body back:
+
+$ curl http://127.0.0.1:5000/send -X POST --data "@test2.json" -H 'Content-Type: applcation/json' -H 'Accept: application/json'
+
+To post json from file test2.json and recieve a html response.  Note this response does not represent a full page.
+
+$ curl http://127.0.0.1:5000/send -X POST --data "@test2.json" -H 'Content-Type: applcation/json' -H 'Accept: application/json'
+
+
+##### Using AJAX
+
+In browser, the url http://127.0.0.1:5000/try will redner web page that allows you to enter a json string into a text area and
+by clicking one to two buttons either retrieve the processed json and update the page, or retrieve a partial html response and 
+update the page.
+
+
+

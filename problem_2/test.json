@@ -1,0 +1,22 @@
+{
+    "id": 123,
+    "name": "Sample Name",
+    "active": true,
+    "count": 1000,
+    "address_ids": [
+        1,
+        30,
+        100,
+        50
+    ],
+    "accounts": [
+        {
+            "id": 1,
+            "name": "Test Account 1"
+        },
+        {
+            "id": 2,
+            "name": "Test Account 2"
+        }
+    ]
+}

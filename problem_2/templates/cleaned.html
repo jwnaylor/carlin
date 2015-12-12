@@ -1,0 +1,33 @@
+<head>
+    <title>Cleaning Report</title>
+    <style>
+        .cleaned {
+            font-family: "Courier 10 Pitch"
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/carlin.js"></script>
+</head>
+<body>
+<form>
+    <textarea id='json-input-area' type="textarea" name="input_json"></textarea>
+    <input id='cleanit-button-one' type="button" value="Clean It JSON" name="cleanit">
+    <input id='cleanit-button-two' type="button" value="Clean It HTML" name="cleanit">
+</form>
+<div id="content">
+    <h1>Here is the JSON document after cleaning</h1>
+    <div class="cleaned">{% if cleaned_json %}
+        {{ cleaned_json|replace("\n", "\n<br>")|replace(" ", '&nbsp;')|safe }}
+    {% endif %}
+    </div>
+    <h1>Here is what happend during cleaning</h1>
+    <div class="report">
+    {% if cleaning_report %}
+        {% for report_line in cleaning_report %}
+            <div class="report-line">{{ report_line }}</div>
+        {% endfor %}
+    {% endif %}
+    </div>
+</div>
+</body>
+

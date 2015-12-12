@@ -1,0 +1,26 @@
+{
+    "xxx": 123,
+    "id": "123",
+    "name": "Sample Name",
+    "active": false,
+    "count": 1000,
+    "countxxx": 1000,
+    "address_ids": [
+        1,
+        30,
+        "100",
+        50
+    ],
+    "accounts": [
+        {
+            "xxx": 1,
+            "id": 1,
+            "name": "Test Account 1"
+        },
+        {
+            "yyy": "X",
+            "id": 2,
+            "name": "Test Account 2"
+        }
+    ]
+}
