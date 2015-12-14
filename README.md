@@ -92,7 +92,7 @@ $ curl http://127.0.0.1:5000/send -X POST --data "@test2.json" -H 'Content-Type:
 ##### Using AJAX
 
 In browser, the url http://127.0.0.1:5000/try will render web page that allows you to enter a json string into a text area and
-by clicking one to two buttons either retrieve the processed json and update the page, or retrieve a partial html response and 
+by clicking one of two buttons either retrieve the processed json and update the page, or retrieve a partial html response and 
 update the page.
 
 
